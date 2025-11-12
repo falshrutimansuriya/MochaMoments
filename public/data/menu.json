@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Cappuccino",
+    "description": "Rich espresso with steamed milk and foam.",
+    "price": 4.5,
+    "image": "/assets/images/cappuccino.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Mocha",
+    "description": "Chocolate-flavored coffee with whipped cream.",
+    "price": 5.0,
+    "image": "/assets/images/mocha.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Latte",
+    "description": "Smooth espresso with steamed milk.",
+    "price": 4.0,
+    "image": "/assets/images/latte.jpg"
+  }
+]
