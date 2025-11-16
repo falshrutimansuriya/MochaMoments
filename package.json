@@ -2,7 +2,7 @@
   "name": "mocha",
   "version": "0.1.0",
   "private": true,
-   "homepage": "https://falshrutimansuriya.github.io/mocha",
+   "homepage": "https://falshrutimansuriya.github.io/mochamoments",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^7.1.0",
     "@testing-library/dom": "^10.4.1",
