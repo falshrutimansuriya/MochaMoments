@@ -1,0 +1,34 @@
+:root {
+  --coffee-brown: #6f4e37;
+  --cream: #f7f3e9;
+  --accent-beige: #cbb994;
+  --dark-brown: #3e2723;
+}
+
+body {
+  background-color: var(--cream);
+  color: var(--dark-brown);
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: var(--coffee-brown);
+}
+
+a:hover {
+  color: var(--dark-brown);
+}
+
+.card {
+  border: none;
+  transition: transform 0.2s;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+.card-img-top {
+  border-top-left-radius: .25rem;
+  border-top-right-radius: .25rem;
+}
+

@@ -1,0 +1,183 @@
+.page {
+  padding: 50px 20px;
+  font-family: "Poppins", sans-serif;
+  background-color: #f9f6f1;
+  color: #3b2f2f;
+  text-align: center;
+}
+
+.hero {
+  background: linear-gradient(135deg, #b08968, #7f5539);
+  color: #fff;
+  padding: 60px 20px;
+  border-radius: 16px;
+  margin-bottom: 40px;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+.rewards-benefits ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+}
+
+.rewards-benefits li {
+  background-color: #ede0d4;
+  margin: 10px auto;
+  padding: 15px;
+  max-width: 500px;
+  border-radius: 8px;
+}
+
+.giftcard-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.giftcard-item {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  width: 280px;
+  text-align: center;
+}
+
+.giftcard-item img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.btn-primary {
+  background-color: #7f5539;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #9c6644;
+}
+
+.btn-secondary {
+  background-color: #ede0d4;
+  color: #3b2f2f;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background-color: #d5bdaf;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.about-content div {
+  max-width: 600px;
+}
+
+
+.reward-card {
+  background-color: #fff;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reward-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+}
+
+.text-brown {
+  color: #4b2e1f;
+}
+
+.btn-primary {
+  background-color: #8d6e63;
+  border: none;
+  border-radius: 8px;
+}
+
+.btn-primary:hover {
+  background-color: #5d4037;
+}
+
+
+.gift-card-item {
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gift-card-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.btn-primary {
+  background-color: #8d6e63;
+  border: none;
+  border-radius: 8px;
+}
+
+.btn-primary:hover {
+  background-color: #5d4037;
+}
+
+.btn-success {
+  border-radius: 8px;
+}
+
+.gift-card-card {
+  border-radius: 20px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.gift-card-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+.card-img-top {
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 2px solid #eee;
+}
+
+.gift-card-card {
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gift-card-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+  height: 220px;
+  object-fit: cover;
+}

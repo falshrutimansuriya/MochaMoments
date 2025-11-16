@@ -1,10 +1,14 @@
-import React from 'react';
+import React from "react";
+import Hero from "../components/Hero";
+import CTA from "../components/CTA";
 
-const Hero = () => (
-  <section className="hero">
-    <h2>Welcome to Mocha Moments</h2>
-    <p>Your cozy café for every mood.</p>
-  </section>
-);
+function Home() {
+  return (
+    <>
+      <Hero />
+      <CTA />
+    </>
+  );
+}
 
-export default Hero;
+export default Home;

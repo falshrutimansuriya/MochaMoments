@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff8f2;
+  color: #3e2723;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4e342e;
+  padding: 15px 40px;
+  color: #fff;
+}
+
+.logo {
+  height: 60px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+}
+
+nav li {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.hero {
+  background-image: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 120px 20px;
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero-text button {
+  background-color: #d7ccc8;
+  color: #3e2723;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.menu {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.menu h2 {
+  color: #4e342e;
+}
+
+.menu-items {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.menu-card {
+  background-color: #fbe9e7;
+  border-radius: 12px;
+  padding: 20px;
+  width: 200px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.footer {
+  background-color: #4e342e;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+}
+
+.text-brown {
+  color: var(--coffee-brown);
+}
+
