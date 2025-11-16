@@ -16,6 +16,7 @@ function Header() {
           <Link to="/menu" className="nav-link d-inline mx-2">Menu</Link>
           <Link to="/rewards" className="nav-link d-inline mx-2">Rewards</Link>
             <Link to="/findstore" className="nav-link d-inline mx-2">FindStore</Link>
+            <Link to="/cart" className="nav-link d-inline mx-2">Cart</Link>
           <Link to="/about" className="nav-link d-inline mx-2">About</Link>
           <Link to="/contact" className="nav-link d-inline mx-2">Contact</Link>
             <Link to="/payment" className="nav-link d-inline mx-2">Payment</Link>

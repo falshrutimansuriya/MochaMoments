@@ -13,6 +13,9 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Cart from "./pages/Cart";
 
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+
 function App() {
   return (
     <div className="App d-flex flex-column min-vh-100">
@@ -21,7 +24,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/menu" element={<Menu />} />
-    
           <Route path="/payment" element={<Payment />} />
           <Route path="/findstore" element={<FindStore />} />
           <Route path="/corporate-orders" element={<CorporateOrders />} />
