@@ -1,0 +1,35 @@
+# ☕ MochaMoments  
+A modern, stylish coffee shop web application inspired by Starbucks — redesigned with a custom theme, unique layout, and fully interactive menu. Built using **React.js**.
+
+---
+
+## 🔗 Live Demo  
+👉 **View the website:**  
+https://falshrutimansuriya.github.io/MochaMoments/
+
+---
+
+## 📌 Overview  
+MochaMoments is a custom-built coffee shop website created using **React.js**, featuring a dynamic menu, clean UI, routing, and a cart system. The design and colors are customized to create a unique premium look different from Starbucks.
+
+---
+
+## ✨ Features  
+- 🧋 Fully interactive menu with **quantity buttons (+/-)**  
+- 🛒 Add & remove items from the cart  
+- 🗂 Organized pages using **React Router**  
+- 🎨 Custom theme, colors, and branding  
+- 📱 Fully responsive UI  
+- 🌐 Hosted using **GitHub Pages**
+
+---
+
+## 🛠️ Tech Stack  
+- **React.js**  
+- **React Router**  
+- **Bootstrap / Custom CSS**  
+- **GitHub Pages (deployment)**
+
+---
+
+## 📁 Project Structure  
