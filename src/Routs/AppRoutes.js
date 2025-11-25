@@ -1,7 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "../pages/Home";
 import Menu from "../pages/Menu";               // fixed path
-import Payment from "../pages/Payment";
 import FindStore from "../pages/FindStore";
 import CorporateOrders from "../pages/CorporateOrders";
 import Rewards from "../pages/Rewards";
@@ -14,7 +13,6 @@ function AppRoutes() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/menu" element={<Menu />} />
-      <Route path="/payment" element={<Payment />} />
       <Route path="/findstore" element={<FindStore />} />
       <Route path="/corporate-orders" element={<CorporateOrders />} />
       <Route path="/rewards" element={<Rewards />} />

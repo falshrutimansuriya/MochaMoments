@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react";
 import { CartContext } from "../context/CartContext";
+import { useNavigate } from "react-router-dom"; // ← THIS IS IMPORTANT
 import "./Pages.css";
 import americano from "../assets/Americano.png";
 import latte from "../assets/latte.png";
@@ -41,22 +42,40 @@ const drinksData = [
   { name: "Mocha Latte", price: 4.4, imgUrl: mochalatte },
 ];
 
-
 function Menu() {
-  const { addItem, removeItem } = useContext(CartContext);
+  const { addItem } = useContext(CartContext);
   const [quantities, setQuantities] = useState(
     drinksData.reduce((acc, drink) => ({ ...acc, [drink.name]: 0 }), {})
   );
 
+  const navigate = useNavigate(); // hook for navigation
+
   const increase = (drink) => {
     setQuantities({ ...quantities, [drink.name]: quantities[drink.name] + 1 });
-    addItem(drink);
   };
 
   const decrease = (drink) => {
-    if (quantities[drink.name] === 0) return; // Cannot go below 0
+    if (quantities[drink.name] === 0) return;
     setQuantities({ ...quantities, [drink.name]: quantities[drink.name] - 1 });
-    removeItem(drink.name);
+  };
+
+  const handleAddToCart = (drink) => {
+    const qty = quantities[drink.name];
+    if (qty === 0) {
+      alert("Please select at least 1 item to add to cart!");
+      return;
+    }
+
+    // Add the selected quantity to cart
+    for (let i = 0; i < qty; i++) {
+      addItem(drink);
+    }
+
+    // Reset the quantity selector
+    setQuantities({ ...quantities, [drink.name]: 0 });
+
+    // Navigate to cart page
+    navigate("/cart");
   };
 
   return (
@@ -70,11 +89,18 @@ function Menu() {
               <div className="card-body text-center">
                 <h5 className="card-title">{drink.name}</h5>
                 <p className="card-text">${drink.price.toFixed(2)}</p>
-                <div className="d-flex justify-content-center align-items-center">
+                <div className="d-flex justify-content-center align-items-center mb-3">
                   <button className="btn btn-secondary me-2" onClick={() => decrease(drink)}>-</button>
                   <span className="mx-2">{quantities[drink.name]}</span>
                   <button className="btn btn-secondary ms-2" onClick={() => increase(drink)}>+</button>
                 </div>
+                {/* Add to Cart button */}
+                <button
+                  className="btn btn-primary w-100"
+                  onClick={() => handleAddToCart(drink)}
+                >
+                  Add to Cart
+                </button>
               </div>
             </div>
           </div>

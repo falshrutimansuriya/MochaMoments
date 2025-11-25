@@ -181,3 +181,84 @@
   height: 220px;
   object-fit: cover;
 }
+
+/* MochaMoments Theme */
+/* Coffee themed card left section */
+.mocha-card-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #f5ebe0;               /* light coffee cream */
+  padding: 15px;
+  border-radius: 15px;
+  border-left: 6px solid #6f4e37;     /* dark coffee strip */
+  box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.mocha-card-left:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* Coffee image styling */
+.mocha-card-left img {
+  width: 85px;
+  height: 85px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 2px solid #d3b89c;          /* soft milk-brown border */
+}
+
+/* Text section */
+.mocha-card-content h5 {
+  font-weight: 700;
+  color: #4b3621;                     /* deep mocha brown */
+}
+
+.mocha-card-content p {
+  margin: 4px 0;
+  color: #5e4836;
+}
+
+/* Quantity buttons */
+.mocha-qty-btn {
+  background: #6f4e37;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  font-size: 18px;
+  border-radius: 10px;
+}
+
+.mocha-qty-number {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 12px;
+}
+
+/* Payment section matching theme */
+.mocha-payment-box {
+  background: #f8f1e7;
+  border-radius: 15px;
+  padding: 25px;
+  border: 2px solid #d4b596;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.mocha-payment-btn {
+  background: #6f4e37 !important;
+  color: #fff !important;
+  font-weight: 600;
+  border-radius: 12px;
+  padding: 10px 20px;
+}
+
+/* Success popup styling */
+.mocha-success {
+  background: #e3d5ca;
+  padding: 40px;
+  border-radius: 20px;
+  border: 2px solid #6f4e37;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}

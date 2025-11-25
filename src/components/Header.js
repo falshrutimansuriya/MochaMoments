@@ -19,7 +19,6 @@ function Header() {
             <Link to="/cart" className="nav-link d-inline mx-2">Cart</Link>
           <Link to="/about" className="nav-link d-inline mx-2">About</Link>
           <Link to="/contact" className="nav-link d-inline mx-2">Contact</Link>
-            <Link to="/payment" className="nav-link d-inline mx-2">Payment</Link>
              <Link to="/corporateOrders" className="nav-link d-inline mx-2">Corporate-Orders</Link>
         </nav>
       </div>
