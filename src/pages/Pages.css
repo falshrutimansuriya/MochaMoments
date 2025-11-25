@@ -1,11 +1,27 @@
+:root {
+  --mocha-dark: #6f4e37;
+  --mocha-light: #f5ebe0;
+  --mocha-border: #d3b89c;
+  --mocha-bg: #f9f6f1;
+  --mocha-text: #3b2f2f;
+  --mocha-card-bg: #fff;
+  --mocha-hover-shadow: rgba(0, 0, 0, 0.15);
+}
+
+body, html {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--mocha-bg);
+  color: var(--mocha-text);
+  margin: 0;
+  padding: 0;
+}
+
 .page {
   padding: 50px 20px;
-  font-family: "Poppins", sans-serif;
-  background-color: #f9f6f1;
-  color: #3b2f2f;
   text-align: center;
 }
 
+/* Hero */
 .hero {
   background: linear-gradient(135deg, #b08968, #7f5539);
   color: #fff;
@@ -14,184 +30,60 @@
   margin-bottom: 40px;
 }
 
-.hero h1 {
-  font-size: 2.8rem;
-  margin-bottom: 15px;
+.hero h1 { font-size: 2.8rem; margin-bottom: 10px; }
+.hero p { font-size: 1.2rem; }
+
+/* Menu Grid - 6 images per row */
+.menu-cover {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  margin-bottom: 50px;
 }
 
-.hero p {
-  font-size: 1.2rem;
-}
-
-.rewards-benefits ul {
-  list-style: none;
-  padding: 0;
-  margin-top: 30px;
-}
-
-.rewards-benefits li {
-  background-color: #ede0d4;
-  margin: 10px auto;
-  padding: 15px;
-  max-width: 500px;
-  border-radius: 8px;
-}
-
-.giftcard-section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 40px;
-}
-
-.giftcard-item {
-  background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  padding: 20px;
-  width: 280px;
-  text-align: center;
-}
-
-.giftcard-item img {
+.menu-cover-item {
   width: 100%;
-  border-radius: 12px;
-  margin-bottom: 15px;
-}
-
-.btn-primary {
-  background-color: #7f5539;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.btn-primary:hover {
-  background-color: #9c6644;
-}
-
-.btn-secondary {
-  background-color: #ede0d4;
-  color: #3b2f2f;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.btn-secondary:hover {
-  background-color: #d5bdaf;
-}
-
-.about-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 40px;
-  margin-top: 40px;
-}
-
-.about-content div {
-  max-width: 600px;
-}
-
-
-.reward-card {
-  background-color: #fff;
-  border-radius: 12px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.reward-card:hover {
-  transform: translateY(-6px) scale(1.03);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
-}
-
-.text-brown {
-  color: #4b2e1f;
-}
-
-.btn-primary {
-  background-color: #8d6e63;
-  border: none;
-  border-radius: 8px;
-}
-
-.btn-primary:hover {
-  background-color: #5d4037;
-}
-
-
-.gift-card-item {
-  border-radius: 12px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.gift-card-item:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-}
-
-.btn-primary {
-  background-color: #8d6e63;
-  border: none;
-  border-radius: 8px;
-}
-
-.btn-primary:hover {
-  background-color: #5d4037;
-}
-
-.btn-success {
-  border-radius: 8px;
-}
-
-.gift-card-card {
-  border-radius: 20px;
+  height: 180px;
   overflow: hidden;
-  transition: 0.3s;
-}
-
-.gift-card-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
-}
-
-.card-img-top {
-  height: 220px;
-  object-fit: cover;
-  border-bottom: 2px solid #eee;
-}
-
-.gift-card-card {
-  border-radius: 15px;
-  overflow: hidden;
+  border-radius: 12px;
+  position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.gift-card-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-.card-img-top {
-  height: 220px;
+.menu-cover-item img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
-/* MochaMoments Theme */
-/* Coffee themed card left section */
+.menu-cover-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 18px var(--mocha-hover-shadow);
+}
+
+.menu-item-name {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-weight: 600;
+  background: rgba(0,0,0,0.4);
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+
+/* Mocha Cards */
 .mocha-card-left {
   display: flex;
   align-items: center;
   gap: 16px;
-  background: #f5ebe0;               /* light coffee cream */
+  background: var(--mocha-light);
   padding: 15px;
   border-radius: 15px;
-  border-left: 6px solid #6f4e37;     /* dark coffee strip */
+  border-left: 6px solid var(--mocha-dark);
   box-shadow: 0 3px 10px rgba(0,0,0,0.12);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -201,64 +93,65 @@
   box-shadow: 0 6px 15px rgba(0,0,0,0.15);
 }
 
-/* Coffee image styling */
 .mocha-card-left img {
   width: 85px;
-  height: 85px;
+  height: 125px;
   border-radius: 12px;
   object-fit: cover;
-  border: 2px solid #d3b89c;          /* soft milk-brown border */
+  border: 2px solid var(--mocha-border);
 }
 
-/* Text section */
 .mocha-card-content h5 {
   font-weight: 700;
-  color: #4b3621;                     /* deep mocha brown */
+  color: #4b3621;
+  margin: 0 0 5px 0;
 }
 
 .mocha-card-content p {
-  margin: 4px 0;
+  margin: 0 0 10px 0;
   color: #5e4836;
 }
 
-/* Quantity buttons */
 .mocha-qty-btn {
-  background: #6f4e37;
+  background: var(--mocha-dark);
   color: #fff;
   border: none;
   padding: 6px 12px;
-  font-size: 18px;
+  font-size: 16px;
   border-radius: 10px;
 }
 
 .mocha-qty-number {
-  font-size: 18px;
   font-weight: bold;
-  margin: 0 12px;
+  margin: 0 10px;
 }
 
-/* Payment section matching theme */
-.mocha-payment-box {
-  background: #f8f1e7;
-  border-radius: 15px;
-  padding: 25px;
-  border: 2px solid #d4b596;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-}
-
-.mocha-payment-btn {
-  background: #6f4e37 !important;
-  color: #fff !important;
+/* Buttons */
+.btn-primary {
+  background-color: var(--mocha-dark);
+  border: none;
+  border-radius: 8px;
+  color: #fff;
   font-weight: 600;
-  border-radius: 12px;
-  padding: 10px 20px;
+  padding: 8px 12px;
+  cursor: pointer;
 }
 
-/* Success popup styling */
-.mocha-success {
-  background: #e3d5ca;
-  padding: 40px;
-  border-radius: 20px;
-  border: 2px solid #6f4e37;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+.btn-primary:hover {
+  background-color: #5d4037;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .menu-cover { grid-template-columns: repeat(4, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .menu-cover { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 480px) {
+  .menu-cover { grid-template-columns: repeat(2, 1fr); }
+  .menu-cover-item { height: 140px; }
+  .mocha-card-left img { width: 60px; height: 90px; }
 }

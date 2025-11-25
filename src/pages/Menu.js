@@ -1,12 +1,12 @@
 import React, { useState, useContext } from "react";
 import { CartContext } from "../context/CartContext";
-import { useNavigate } from "react-router-dom"; // ← THIS IS IMPORTANT
+import { useNavigate } from "react-router-dom"; // ← for navigation
 import "./Pages.css";
 import americano from "../assets/Americano.png";
 import latte from "../assets/latte.png";
 import mocha from "../assets/mocha.png";
 import caramel from "../assets/caremalmacchiato.png";
-import flatwhite from "../assets/flatwhite.png";
+import flatwhite from "../assets/freshlybrewedcoffee.png";
 import brewed from "../assets/freshlybrewedcoffee.png";
 import coldbrew from "../assets/coldbrew.png";
 import frappuccino from "../assets/mochafrappuccino.png";
@@ -48,7 +48,7 @@ function Menu() {
     drinksData.reduce((acc, drink) => ({ ...acc, [drink.name]: 0 }), {})
   );
 
-  const navigate = useNavigate(); // hook for navigation
+  const navigate = useNavigate(); // ← useNavigate hook
 
   const increase = (drink) => {
     setQuantities({ ...quantities, [drink.name]: quantities[drink.name] + 1 });
@@ -59,52 +59,72 @@ function Menu() {
     setQuantities({ ...quantities, [drink.name]: quantities[drink.name] - 1 });
   };
 
-  const handleAddToCart = (drink) => {
-    const qty = quantities[drink.name];
-    if (qty === 0) {
-      alert("Please select at least 1 item to add to cart!");
+  const handleAddAllToCart = () => {
+    const selectedDrinks = drinksData.filter((drink) => quantities[drink.name] > 0);
+
+    if (selectedDrinks.length === 0) {
+      alert("Please select at least one drink!");
       return;
     }
 
-    // Add the selected quantity to cart
-    for (let i = 0; i < qty; i++) {
-      addItem(drink);
-    }
+    // Add all selected drinks to cart
+    selectedDrinks.forEach((drink) => {
+      for (let i = 0; i < quantities[drink.name]; i++) {
+        addItem(drink);
+      }
+    });
 
-    // Reset the quantity selector
-    setQuantities({ ...quantities, [drink.name]: 0 });
+    // Reset quantities
+    setQuantities(drinksData.reduce((acc, drink) => ({ ...acc, [drink.name]: 0 }), {}));
 
     // Navigate to cart page
     navigate("/cart");
   };
 
   return (
-    <div className="container py-5">
-      <h1 className="text-center mb-5">Our Menu</h1>
+    <div className="page">
+      {/* Hero Section */}
+      <div className="hero">
+        <h1>Our Delicious Menu</h1>
+        <p>Explore handcrafted beverages and treats</p>
+      </div>
+
+      {/* Menu Grid */}
+      <div className="menu-cover">
+        {drinksData.map((drink) => (
+          <div key={drink.name} className="menu-cover-item">
+            <img src={drink.imgUrl} alt={drink.name} />
+            <h5 className="menu-item-name">{drink.name}</h5>
+          </div>
+        ))}
+      </div>
+
+      {/* Quantity Selector */}
+      <h2 className="text-center mb-4">Select Quantities</h2>
       <div className="row">
-        {drinksData.map((drink, i) => (
-          <div className="col-md-6 col-lg-4 mb-4" key={i}>
-            <div className="card shadow h-100">
-              <img src={drink.imgUrl} className="card-img-top" alt={drink.name} />
-              <div className="card-body text-center">
-                <h5 className="card-title">{drink.name}</h5>
-                <p className="card-text">${drink.price.toFixed(2)}</p>
-                <div className="d-flex justify-content-center align-items-center mb-3">
-                  <button className="btn btn-secondary me-2" onClick={() => decrease(drink)}>-</button>
-                  <span className="mx-2">{quantities[drink.name]}</span>
-                  <button className="btn btn-secondary ms-2" onClick={() => increase(drink)}>+</button>
+        {drinksData.map((drink) => (
+          <div className="col-md-6 col-lg-4 mb-4" key={drink.name}>
+            <div className="mocha-card-left">
+              <img src={drink.imgUrl} alt={drink.name} />
+              <div className="mocha-card-content">
+                <h5>{drink.name}</h5>
+                <p>${drink.price.toFixed(2)}</p>
+                <div className="d-flex align-items-center mb-2">
+                  <button className="mocha-qty-btn me-2" onClick={() => decrease(drink)}>-</button>
+                  <span className="mocha-qty-number">{quantities[drink.name]}</span>
+                  <button className="mocha-qty-btn ms-2" onClick={() => increase(drink)}>+</button>
                 </div>
-                {/* Add to Cart button */}
-                <button
-                  className="btn btn-primary w-100"
-                  onClick={() => handleAddToCart(drink)}
-                >
-                  Add to Cart
-                </button>
               </div>
             </div>
           </div>
         ))}
+      </div>
+
+      {/* Single Add All to Cart Button */}
+      <div className="text-center mt-4">
+        <button className="btn btn-primary btn-lg" onClick={handleAddAllToCart}>
+          Add to Cart
+        </button>
       </div>
     </div>
   );

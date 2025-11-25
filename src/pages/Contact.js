@@ -45,10 +45,16 @@ const Contact = () => {
         <input
           type="email"
           className="form-control mb-3"
-          placeholder="Your Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          onBlur={() => {
+            if (email && !email.includes("@gmail.com")) {
+              alert("Please enter a valid email address with '@gmail.com'");
+            }
+          }}
+          placeholder="Enter email"
         />
+
 
         <label className="form-label">Message</label>
         <textarea

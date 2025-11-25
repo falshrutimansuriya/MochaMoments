@@ -14,7 +14,7 @@ function AppRoutes() {
       <Route path="/" element={<Home />} />
       <Route path="/menu" element={<Menu />} />
       <Route path="/findstore" element={<FindStore />} />
-      <Route path="/corporate-orders" element={<CorporateOrders />} />
+      <Route path="/corporateOrders" element={<CorporateOrders />} />
       <Route path="/rewards" element={<Rewards />} />
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
