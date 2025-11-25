@@ -1,9 +1,8 @@
 {
   "files": {
-    "main.css": "/MochaMoments/static/css/main.ef297daa.css",
-    "main.js": "/MochaMoments/static/js/main.2e1eb39a.js",
+    "main.css": "/MochaMoments/static/css/main.f2103c59.css",
+    "main.js": "/MochaMoments/static/js/main.3ae13949.js",
     "static/media/logo.png": "/MochaMoments/static/media/logo.2b9d184d7375577890b9.png",
-    "static/media/flatwhite.png": "/MochaMoments/static/media/flatwhite.67b31848b2178345662c.png",
     "static/media/whiteflatchocolate.png": "/MochaMoments/static/media/whiteflatchocolate.5dae3229315b6fa3c384.png",
     "static/media/icedmochalatte.png": "/MochaMoments/static/media/icedmochalatte.26bd45a83b48d4554550.png",
     "static/media/signaturehotchocolate.png": "/MochaMoments/static/media/signaturehotchocolate.4e027d6507c212f399b4.png",
@@ -22,11 +21,11 @@
     "static/media/Americano.png": "/MochaMoments/static/media/Americano.778c6a103802439e7d62.png",
     "static/media/fa-v4compatibility.woff2": "/MochaMoments/static/media/fa-v4compatibility.e4340c52a50e727c6afa.woff2",
     "index.html": "/MochaMoments/index.html",
-    "main.ef297daa.css.map": "/MochaMoments/static/css/main.ef297daa.css.map",
-    "main.2e1eb39a.js.map": "/MochaMoments/static/js/main.2e1eb39a.js.map"
+    "main.f2103c59.css.map": "/MochaMoments/static/css/main.f2103c59.css.map",
+    "main.3ae13949.js.map": "/MochaMoments/static/js/main.3ae13949.js.map"
   },
   "entrypoints": [
-    "static/css/main.ef297daa.css",
-    "static/js/main.2e1eb39a.js"
+    "static/css/main.f2103c59.css",
+    "static/js/main.3ae13949.js"
   ]
 }
